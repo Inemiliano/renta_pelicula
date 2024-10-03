@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './compra.component.css'
 })
 export class CompraComponent {
+  
 
 }
