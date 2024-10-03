@@ -1,26 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PrincipalComponent } from './principal/principal.component';
 import { CompraComponent } from './compra/compra.component';
 import { HistorialComponent } from './historial/historial.component';
-import { SeriesComponent } from './series/series.component';
-
-
+import { PrincipalComponent } from './principal/principal.component';
 
 @NgModule({
   declarations: [
-    PrincipalComponent,
-    CompraComponent,
-    HistorialComponent,
-    SeriesComponent
+    CompraComponent,     
+    HistorialComponent,   
+    PrincipalComponent     
   ],
   imports: [
-    CommonModule
+    CommonModule          
   ],
-  exports:[
-    CompraComponent,
-    PrincipalComponent,
-    HistorialComponent
+  exports: [
+    CompraComponent,      
+    HistorialComponent,   
+    PrincipalComponent     
   ]
 })
 export class ModuloModule { }

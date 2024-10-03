@@ -17,8 +17,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-  }
-  
+}
 
 /* Header styles */
 #header {
@@ -32,7 +31,6 @@ body {
     position: relative; 
     top: 0; 
 }
-
 
 /* Container styles */
 #container {
@@ -83,24 +81,21 @@ body {
     text-align: center;
 }
 
-
+/* Aumentar el tamaño y centrar la tarjeta */
 #large-movie-card {
-   
     background-color: #1a1a1a;
     border-radius: 10px;
-    padding: 20px;
-    max-width: 600px;
+    padding: 30px; /* Aumentar el padding */
+    max-width: 800px; /* Aumentar el ancho máximo */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
-    margin: 0; 
-    
+    margin: 20px auto; /* Centrar la tarjeta con un margen superior */
 }
 
 /* Title for the card */
 #card-title {
-    font-size: 24px; /* Tamaño del título de la tarjeta */
+    font-size: 28px; /* Aumentar el tamaño del título de la tarjeta */
     margin-bottom: 20px;
     color: white;
-   
 }
 
 /* Movies grid */
