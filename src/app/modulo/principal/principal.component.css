@@ -1,0 +1,141 @@
+/* General Styles */
+* {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background: radial-gradient(circle at 30% 40%, #00ffb2, transparent 40%),
+                radial-gradient(circle at 60% 40%, #00ccff, transparent 50%),
+                radial-gradient(circle at 80% 60%, #002f4e, transparent 50%),
+                radial-gradient(circle at 50% 60%, #0b0b0b, #0b0b0b 70%);
+    background-color: #000; /* Fallback color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+/* Header styles */
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f2f2f;
+    padding: 40px 20px; 
+    width: 100%; 
+    position: relative; 
+    top: 0; 
+}
+
+
+/* Container styles */
+#container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar el contenedor en la pantalla */
+    padding: 20px; /* Espaciado del contenedor */
+}
+
+/* Adjustments to center the title */
+#nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 20px; /* Espaciado entre elementos del menú */
+}
+
+#nav-list li {
+    margin: 0 15px;
+}
+
+#main-title {
+    text-align: center;
+    font-size: 24px; /* Tamaño más grande para el título */
+    margin: 20px 0; /* Espacio adicional alrededor del título */
+}
+
+#nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Aumentamos el tamaño de los enlaces */
+}
+
+#nav-list li a:hover {
+    color: #1abc9c;
+}
+
+#logo {
+    width: 150px;
+    margin-bottom: 10px; /* Separación del logo con el resto */
+}
+
+/* Movie Suggestions Section */
+#movie-suggestions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+#large-movie-card {
+   
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    margin: 0; 
+    
+}
+
+/* Title for the card */
+#card-title {
+    font-size: 24px; /* Tamaño del título de la tarjeta */
+    margin-bottom: 20px;
+    color: white;
+   
+}
+
+/* Movies grid */
+#movies {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Movie item styles */
+.movie-item {
+    flex: 1; /* Para que cada imagen ocupe el mismo espacio */
+    margin: 0 10px; /* Espacio entre imágenes */
+    text-align: center; /* Centrar el contenido dentro de la tarjeta de cada película */
+}
+
+.movie-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+}
+
+/* Rent button */
+.rent-button {
+    background-color: #00cc66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Espacio por encima del botón */
+}
+
+.rent-button:hover {
+    background-color: #00994c;
+}

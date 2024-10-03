@@ -1,0 +1,45 @@
+<body>
+  <div id="header">
+    <img src="assets/imagenes/filmhouse.png" alt="Logo" id="logo">
+    <nav id="nav">
+      <a href="#">PELICULAS</a>
+      <a href="#">SERIES</a>
+      <a href="#">HISTORIAL</a>
+    </nav>
+    <div id="payment">
+      <img src="assets/imagenes/pago.png" alt="Pago" id="payment-icon">
+      <span id="textPago">PAGO</span>
+    </div>
+  </div>
+
+  <div id="rental-container">
+    <div id="rental-content">
+      <div id="movie-info">
+        <img src="assets/movie-poster.jpg" alt="Poster" id="poster">
+      </div>
+
+      <div id="rental-form">
+        <h2>Ingrese su nombre</h2>
+        <input type="text" placeholder="Nombre" id="name">
+
+        <h2>Fecha de renta</h2>
+        <input type="date" id="rental-date">
+
+        <h2>Tiempo a rentar</h2>
+        <select id="rental-duration">
+          <option value="1">1 semana</option>
+          <option value="2">2 semanas</option>
+        </select>
+
+        <div id="rental-summary">
+          <h3>FECHA RENTA: --/--/----</h3>
+          <h3>FECHA A ENTREGAR: --/--/----</h3>
+          <h3>TOTAL: --</h3>
+        </div>
+
+        <!-- Botón Finalizar -->
+        <button type="button">Finalizar</button>
+      </div>
+    </div>
+  </div>
+</body>
