@@ -1,0 +1,74 @@
+/* src/app/login/login.component.css */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-box {
+    background-color: rgba(30, 60, 114, 0.9); /* Fondo semitransparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: white;
+    width: 300px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #c0c0c0;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2a5298;
+    color: white;
+    font-size: 14px;
+  }
+  
+  input::placeholder {
+    color: #a0a0a0;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #1e3c72;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Fondo más azulado */
+  body {
+    background: radial-gradient(circle at 30% 40%, #004080, transparent 30%),
+                radial-gradient(circle at 60% 40%, #0066cc, transparent 40%),
+                radial-gradient(circle at 80% 60%, #0099ff, transparent 50%),
+                radial-gradient(circle at 50% 60%, #003366, #003366 60%);
+    background-color: #001f3f; /* Color de respaldo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
