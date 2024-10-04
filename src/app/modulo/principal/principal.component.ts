@@ -13,4 +13,7 @@ export class PrincipalComponent {
     onCompras(){
       this.router.navigate(['/compra'])
     }
+    onHistorial(){
+      this.router.navigate(['/historial'])
+    }
 }
