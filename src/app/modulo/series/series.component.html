@@ -1,1 +1,36 @@
-<p>series works!</p>
+<body>
+    <div id="container">
+      <header id="header">
+        <img src="./assets/imagenes/filmhouse.png" alt="Filmhouse Logo" id="logo">
+        <nav id="nav">
+          <ul id="nav-list">
+            <li><a href="#">RENTAL DE PELICULAS Y SERIES</a></li>
+            <li><a href="#">MOVIES</a></li>
+            <li><a href="#">SERIES</a></li>
+            <li><a href="#">HISTORY</a></li>
+          </ul>
+        </nav>
+      </header>
+  
+      <section id="movie-suggestions">
+        <h2 id="suggestion-title">Tal vez te gusten estas series </h2>
+        <div id="large-movie-card" class="movie-card">
+          <h3 id="card-title">Sugerencias de series </h3>
+          <div id="movies">
+            <div class="movie-item">
+              <img src="./assets/imagenes/breaking.jpeg" alt="Megamind" id="megamente-img">
+              <button id="rent-button-1" type="button" class="rent-button" (click)="onCompras()">RENTAR</button>
+            </div>
+            <div class="movie-item">
+              <img src="./assets/imagenes/daredevil.jpg" alt="The Hangover 2" id="hangover-img">
+              <button id="rent-button-2" type="button" class="rent-button" (click)="onCompras()">RENTAR</button>
+            </div>
+            <div class="movie-item">
+              <img src="./assets/imagenes/theboys.jpg" alt="Zombieland" id="zombieland-img">
+              <button id="rent-button-3" type="button" class="rent-button" (click)="onCompras()">RENTAR</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>

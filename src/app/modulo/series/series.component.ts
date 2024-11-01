@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-series',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrl: './series.component.css'
 })
 export class SeriesComponent {
+  constructor(private router:Router){
 
+  }
+  onCompras(){
+    this.router.navigate(['/compra'])
+  }
+  onHistorial(){
+    this.router.navigate(['/historial'])
+  }
 }
+
+

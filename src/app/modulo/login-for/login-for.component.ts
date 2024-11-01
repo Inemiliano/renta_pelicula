@@ -4,10 +4,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-for',
   templateUrl: './login-for.component.html',
-  styleUrl: './login-for.component.css'
+  styleUrls: ['./login-for.component.css'] // Corrige a styleUrls
 })
 export class LoginForComponent {
-    users: any[] = [];
     nombre: string = '';
     apellido: string = '';
     usuario: string = '';
@@ -16,7 +15,6 @@ export class LoginForComponent {
     constructor(private router: Router) {} 
   
     onSubmit() {
-      
       const newUser = {
         nombre: this.nombre,
         apellido: this.apellido,
@@ -24,16 +22,17 @@ export class LoginForComponent {
         password: this.password,
       };
   
-   
-      this.users.push(newUser);
+      // Guardar el nuevo usuario en localStorage
+      const users = JSON.parse(localStorage.getItem('users') || '[]');
+      users.push(newUser);
+      localStorage.setItem('users', JSON.stringify(users));
   
-      
+      // Limpiar los campos
       this.nombre = '';
       this.apellido = '';
       this.usuario = '';
       this.password = '';
   
-   
       this.router.navigate(['/login']);
     }
   
@@ -53,5 +52,4 @@ export class LoginForComponent {
       this.password = (event.target as HTMLInputElement).value;
     }
 }
-
 

@@ -5,11 +5,13 @@ import { PrincipalComponent } from './modulo/principal/principal.component';
 import { HistorialComponent } from './modulo/historial/historial.component';
 import { LoginComponent } from './modulo/login/login.component';
 import { LoginForComponent } from './modulo/login-for/login-for.component';
+import { SeriesComponent } from './modulo/series/series.component';
 
 const routes: Routes = [
 
   {path: 'compra',component:CompraComponent},
   {path: 'principal',component:PrincipalComponent},
+  {path: 'series',component:SeriesComponent},
   {path: 'historial',component:HistorialComponent},
   {path: 'login',component:LoginComponent},
   {path: '',component:LoginForComponent},

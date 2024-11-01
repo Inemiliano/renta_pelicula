@@ -1,103 +1,174 @@
 /* General Styles */
 * {
-    box-sizing: border-box; 
-    margin: 0; 
-    padding: 0; 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
 }
 
 body {
-    background: radial-gradient(circle at 30% 40%, #00ffb2, transparent 40%),
-                radial-gradient(circle at 60% 40%, #00ccff, transparent 50%),
-                radial-gradient(circle at 80% 60%, #002f4e, transparent 50%),
-                radial-gradient(circle at 50% 60%, #0b0b0b, #0b0b0b 70%);
-    background-color: #000; /* Fallback color */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+  background: radial-gradient(circle at 30% 40%, #00ffb2, transparent 40%),
+              radial-gradient(circle at 60% 40%, #00ccff, transparent 50%),
+              radial-gradient(circle at 80% 60%, #002f4e, transparent 50%),
+              radial-gradient(circle at 50% 60%, #0b0b0b, #0b0b0b 70%);
+  background-color: #000; /* Fallback color */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
+
 #container {
-    width: 100%;
-    background-color: #1b1b1b;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-  
-  #header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-  }
-  
-  #logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  #logo {
-    width: 50px; /* Ajusta el tamaño del logo según tus necesidades */
-    height: auto;
-    margin-right: 10px;
-  }
-  
-  #title {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  #nav {
-    display: flex;
-    gap: 15px;
-  }
-  
-  #nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  #content {
-    padding: 20px;
-  }
-  
-  #historial-section {
-    margin-top: 20px;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  #historial-title {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  
-  #historial-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #222;
-  }
-  
-  #historial-table th,
-  #historial-table td {
-    padding: 12px 15px;
-    border: 1px solid #444;
-  }
-  
-  #historial-table th {
-    background-color: #444;
-  }
-  
-  #historial-table td {
-    background-color: #2b2b2b;
-    text-align: left;
-  }
-  
-  #historial-table tr:hover {
-    background-color: #555;
-  }
-  
+  width: 100%;
+  background-color: #1b1b1b;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+}
+
+#logo-container {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 50px; /* Ajusta el tamaño del logo según tus necesidades */
+  height: auto;
+  margin-right: 10px;
+}
+
+#title {
+  font-size: 24px;
+  margin: 0;
+}
+
+#nav {
+  display: flex;
+  gap: 15px;
+}
+
+#nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+#content {
+  padding: 20px;
+}
+
+
+.section-table {
+  margin-top: 20px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.table-style {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #222;
+}
+
+.table-style th,
+.table-style td {
+  padding: 12px 15px;
+  border: 1px solid #444;
+}
+
+.table-style th {
+  background-color: #444;
+}
+
+.table-style td {
+  background-color: #2b2b2b;
+  text-align: left;
+}
+
+.table-style tr:hover {
+  background-color: #555;
+}
+
+/* Historial de Rentas */
+#historial-section {
+  margin-top: 20px;
+}
+
+#historial-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+#historial-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #222;
+}
+
+#historial-table th,
+#historial-table td {
+  padding: 12px 15px;
+  border: 1px solid #444;
+}
+
+#historial-table th {
+  background-color: #444;
+}
+
+#historial-table td {
+  background-color: #2b2b2b;
+  text-align: left;
+}
+
+#historial-table tr:hover {
+  background-color: #555;
+}
+
+
+#series-section {
+  margin-top: 20px;
+}
+
+#series-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+#series-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #222;
+}
+
+#series-table th,
+#series-table td {
+  padding: 12px 15px;
+  border: 1px solid #444;
+}
+
+#series-table th {
+  background-color: #444;
+}
+
+#series-table td {
+  background-color: #2b2b2b;
+  text-align: left;
+}
+
+#series-table tr:hover {
+  background-color: #555;
+}

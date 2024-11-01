@@ -19,6 +19,15 @@
       </div>
 
       <div id="rental-form">
+        <h2>Seleccione Película o Serie</h2>
+
+        <!-- Selector de tipo -->
+        <select (change)="seleccionarTipo($event)">
+          <option value="">Seleccionar</option>
+          <option value="pelicula">Película</option>
+          <option value="serie">Serie</option>
+        </select>
+
         <h2>Ingrese su nombre</h2>
         <input type="text" placeholder="Nombre" (input)="actualizarNombre($event)">
 
@@ -36,7 +45,8 @@
           <h3>FECHA A ENTREGAR: --/--/----</h3>
           <h3>TOTAL: --</h3>
         </div>
-        <!-- Botón Finalizar -->
+
+
         <button type="button" (click)="guardarDatos()">Finalizar</button>
       </div>
     </div>

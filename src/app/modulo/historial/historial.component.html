@@ -1,41 +1,115 @@
 <body>
-  <div id="container">
-    <header id="header">
-      <div id="logo-container">
-        <img id="logo" src="assets/imagenes/filmhouse.png" alt="Logo Filmhouse">
-      </div>
-      <nav id="nav">
-        <a id="renta" href="#">RENTA DE PELÍCULAS Y SERIES</a>
-        <a id="peliculas" href="#">PELICULAS</a>
-        <a id="series" href="#">SERIES</a>
-        <a id="historial" href="#">HISTORIAL</a>
-      </nav>
-    </header>
+  <div id="header">
+    <img src="assets/imagenes/filmhouse.png" alt="Logo" id="logo">
+    <nav id="nav">
+      <a href="#">PELICULAS</a>
+      <a href="#">SERIES</a>
+      <a href="#">HISTORIAL</a>
+    </nav>
+    <div id="payment">
+      <img src="assets/imagenes/pago.png" alt="Pago" id="payment-icon">
+      <span id="textPago">PAGO</span>
+    </div>
+  </div>
 
-    <section id="content">
-      <div id="historial-section">
-        <h2 id="historial-title">HISTORIAL</h2>
-        <table id="historial-table">
-          <thead>
-            <tr>
-              <th id="col-nombre">NOMBRE</th>
-              <th id="col-pelicula">PELÍCULA O SERIE</th>
-              <th id="col-fecha-rentada">FECHA RENTADA</th>
-              <th id="col-fecha-entrega">FECHA ENTREGA</th>
-              <th id="col-total-pagar">TOTAL A PAGAR</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let renta of datosRenta">
-              <td>{{ renta.nombre }}</td>
-              <td>{{ renta.pelicula || 'Sin película' }}</td> 
-              <td>{{ renta.fechaRenta }}</td>
-              <td>{{ renta.fechaEntrega || 'Sin fecha' }}</td>
-              <td>{{ renta.total || '$0' }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+  <div id="historial-section">
+    <h2 id="historial-title">HISTORIAL DE RENTAS</h2>
+
+    <button (click)="activarEdicion()">{{ editar ? 'Guardar Cambios' : 'Editar Fechas' }}</button>
+
+    <h3>Películas</h3>
+    <table id="historial-table">
+      <thead>
+        <tr>
+          <th>NOMBRE</th>
+          <th>PELÍCULA</th>
+          <th>FECHA RENTADA</th>
+          <th>FECHA ENTREGA</th>
+          <th>TOTAL A PAGAR</th>
+          <th>ACCIONES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pelicula of datosPeliculas">
+          <td>
+            <input 
+              type="text" 
+              [value]="pelicula.nombre" 
+              readonly 
+            />
+          </td>
+          <td>{{ pelicula.pelicula }}</td>
+          <td>
+            <input 
+              type="date" 
+              [value]="pelicula.fechaRenta" 
+              (change)="actualizarCampo(pelicula, 'fechaRenta', $event)" 
+              [disabled]="!editar" 
+            />
+          </td>
+          <td>
+            <input 
+              type="date" 
+              (change)="actualizarCampo(pelicula, 'fechaEntrega', $event)" 
+              placeholder="Fecha de entrega" 
+              [disabled]="!editar" 
+            />
+          </td>
+          <td>{{ pelicula.total || '$0' }}</td>
+          <td>
+            <button (click)="eliminarRenta(pelicula)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Series</h3>
+    <table id="series-table">
+      <thead>
+        <tr>
+          <th>NOMBRE</th>
+          <th>SERIE</th>
+          <th>FECHA RENTADA</th>
+          <th>FECHA ENTREGA</th>
+          <th>TOTAL A PAGAR</th>
+          <th>ACCIONES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let serie of datosSeries">
+          <td>
+            <input 
+              type="text" 
+              [value]="serie.nombre" 
+              readonly 
+            />
+          </td>
+          <td>{{ serie.serie }}</td>
+          <td>
+            <input 
+              type="date" 
+              [value]="serie.fechaRenta" 
+              (change)="actualizarCampo(serie, 'fechaRenta', $event)" 
+              [disabled]="!editar" 
+            />
+          </td>
+          <td>
+            <input 
+              type="date" 
+              (change)="actualizarCampo(serie, 'fechaEntrega', $event)" 
+              placeholder="Fecha de entrega" 
+              [disabled]="!editar" 
+            />
+          </td>
+          <td>{{ serie.total || '$0' }}</td>
+          <td>
+            <button (click)="eliminarRenta(serie)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>
+
+
+

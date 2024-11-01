@@ -6,36 +6,66 @@ import { Component } from '@angular/core';
   styleUrls: ['./compra.component.css']
 })
 export class CompraComponent {
+  nombre: string = '';
+  tipoSeleccionado: string = ''; 
+  fechaRenta: string = '';
+  tiempoRenta: string = '1';
 
-  // Creamos un objeto para almacenar los datos
-  datosRenta: { nombre: string; fechaRenta: string; tiempoRenta: string } = {
-    nombre: '',
-    fechaRenta: '',
-    tiempoRenta: '1'
-  };
+  seleccionarTipo(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.tipoSeleccionado = selectElement.value;
+  }
 
-  // Métodos para actualizar cada campo al escribir en los inputs
   actualizarNombre(event: Event) {
     const inputElement = event.target as HTMLInputElement;
-    this.datosRenta.nombre = inputElement.value;
+    this.nombre = inputElement.value;
   }
 
   actualizarFechaRenta(event: Event) {
     const inputElement = event.target as HTMLInputElement;
-    this.datosRenta.fechaRenta = inputElement.value;
+    this.fechaRenta = inputElement.value;
   }
 
   actualizarTiempoRenta(event: Event) {
     const selectElement = event.target as HTMLSelectElement;
-    this.datosRenta.tiempoRenta = selectElement.value;
+    this.tiempoRenta = selectElement.value;
   }
 
-  // Método para guardar los datos en localStorage
   guardarDatos() {
-    localStorage.setItem('datosRenta', JSON.stringify(this.datosRenta));
-    console.log('Datos guardados:', this.datosRenta);
+  
+    const datosExistentes = localStorage.getItem('datosRenta');
+
+   
+    let datosArray = [];
+
+    if (datosExistentes) {
+      try {
+        datosArray = JSON.parse(datosExistentes);
+        
+      
+        if (!Array.isArray(datosArray)) {
+          datosArray = [datosArray];
+        }
+      } catch (e) {
+        console.error('Error al parsear los datos existentes:', e);
+      }
+    }
+
     
-    // Alerta para indicar que los datos han sido guardados
+    const nuevoRenta = {
+      nombre: this.nombre,
+      tipo: this.tipoSeleccionado,
+      fechaRenta: this.fechaRenta,
+      tiempoRenta: this.tiempoRenta,
+      
+    };
+
+    datosArray.push(nuevoRenta);
+
+    
+    localStorage.setItem('datosRenta', JSON.stringify(datosArray));
+
+    console.log('Datos guardados:', datosArray);
     alert('Datos guardados correctamente!');
   }
 }
