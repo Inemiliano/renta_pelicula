@@ -1,0 +1,63 @@
+<!-- src/app/<nombre-componente>.component.html -->
+    <body>
+        <nav class="navbar">
+            <div class="navbar-logo">FilmHouse</div>
+            <div class="navbar-links">
+              <a href="#">Películas</a>
+              <a href="#">Series</a>
+              <a href="#">Historial</a>
+            </div>
+            <div class="navbar-icon"></div>
+        </nav>
+        
+        <div class="background">
+          <h2 class="title">Planes de Suscripción</h2>
+          <div class="subscription-container">
+           
+            <div class="subscription-card">
+              <h3>Individual</h3>
+              <p class="price">80$/mes</p>
+              <ul>
+                <li>Disfruta de todas nuestras ofertas que tenemos</li>
+                <li>Descuentos exclusivos y de las mejores películas/series</li>
+                <li>¡Obten ya tu cuenta premium!</li>
+              </ul>
+              <button (click)="onCompras()">suscribirse</button>
+            </div>
+        
+            <div class="subscription-card">
+              <h3>Duo</h3>
+              <p class="price">130$/mes</p>
+              <ul>
+                <li>Disfruta de todos los beneficios anteriores</li>
+                <li>Ahora con películas y series más nuevas</li>
+              </ul>
+              <button (click)="onCompras()">suscribirse</button>
+            </div>
+        
+            <div class="subscription-card">
+              <h3>Familiar</h3>
+              <p class="price">160$/mes</p>
+              <ul>
+                <li>Disfruta y comparte todas las películas/series</li>
+                <li>Películas/series de la mayor calidad</li>
+                <li>¡Únete para más beneficios!</li>
+              </ul>
+              <button (click)="onCompras()">suscribirse</button>
+            </div>
+        
+            <div class="subscription-card">
+              <h3>Estudiantes</h3>
+              <p class="price">60$/mes</p>
+              <ul>
+                <li>Descuento especial para estudiantes universitarios</li>
+                <li>Explora nuestro catálogo</li>
+                <li>¡Disfruta después de un examen!</li>
+              </ul>
+              <button (click)="onCompras()">suscribirse</button>
+            </div>
+          </div>
+        </div>
+      </body>
+      
+      

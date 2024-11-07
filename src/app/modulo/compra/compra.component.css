@@ -9,7 +9,7 @@ body {
               radial-gradient(circle at 60% 40%, #00ccff, transparent 50%),
               radial-gradient(circle at 80% 60%, #002f4e, transparent 50%),
               radial-gradient(circle at 50% 60%, #0b0b0b, #0b0b0b 70%);
-  background-color: #000; /* Fallback color */
+  background-color: #000; 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@ body {
   padding: 0;
 }
 
-/* Header (sección separada) */
+
 #header {
   width: 100%;
   background-color: #1E1E1E;

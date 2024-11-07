@@ -1,0 +1,135 @@
+/* General Styles */
+* {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background: radial-gradient(circle at 30% 40%, #00ffb2, transparent 40%),
+                radial-gradient(circle at 60% 40%, #00ccff, transparent 50%),
+                radial-gradient(circle at 80% 60%, #002f4e, transparent 50%),
+                radial-gradient(circle at 50% 60%, #0b0b0b, #0b0b0b 70%);
+    background-color: #000; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f2f2f;
+    padding: 40px 20px; 
+    width: 100%; 
+    position: relative; 
+    top: 0; 
+}
+
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+
+#nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 20px; 
+}
+
+#nav-list li {
+    margin: 0 15px;
+}
+
+#main-title {
+    text-align: center;
+    font-size: 24px; 
+    margin: 20px 0; 
+}
+
+#nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; 
+}
+
+#nav-list li a:hover {
+    color: #1abc9c;
+}
+
+#logo {
+    width: 150px;
+    margin-bottom: 10px; 
+}
+
+
+#movie-suggestions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+#large-movie-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 30px; 
+    max-width: 800px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    margin: 20px auto; 
+}
+
+#card-title {
+    font-size: 28px; 
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+#movies {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+.movie-item {
+    flex: 1; 
+    margin: 0 10px; 
+    text-align: center; 
+}
+
+.movie-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+}
+
+
+.rent-button {
+    background-color: #00cc66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.rent-button:hover {
+    background-color: #00994c;
+}

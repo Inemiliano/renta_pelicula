@@ -1,1 +1,117 @@
-<p>historial works!</p>
+<body>
+  <div id="historial-section">
+    <h2 id="historial-title">HISTORIAL DE RENTAS</h2>
+  
+    <button (click)="activarEdicion()" class="editar">
+      {{ editar ? 'Guardar Cambios' : 'Editar Fechas' }}
+    </button>
+  
+    <h3>Películas</h3>
+    <table id="historial-table" class="table-style">
+      <thead>
+        <tr>
+          <th>NOMBRE</th>
+          <th>PELÍCULA</th>
+          <th>FECHA RENTADA</th>
+          <th>FECHA ENTREGA</th>
+          <th>TOTAL A PAGAR</th>
+          <th>ACCIONES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pelicula of datosPeliculas">
+          <td>
+            <input type="text" [value]="pelicula.nombre" readonly />
+          </td>
+          <td>
+            <input 
+              type="date" 
+              [value]="pelicula.fechaRenta" 
+              (change)="actualizarCampo(pelicula, 'fechaRenta', $event)" 
+              [disabled]="!editar" 
+            />
+          </td>
+          <td>
+            <input 
+              type="date" 
+              (change)="actualizarCampo(pelicula, 'fechaEntrega', $event)" 
+              placeholder="Fecha de entrega" 
+              [disabled]="!editar" 
+            />
+          </td>
+          <td>{{ pelicula.total || '$0' }}</td>
+          <td>
+            <button (click)="eliminarRenta(pelicula)" class="eliminar">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <h3>Series</h3>
+    <table id="series-table" class="table-style">
+      <thead>
+        <tr>
+          <th>NOMBRE</th>
+          <th>SERIE</th>
+          <th>FECHA RENTADA</th>
+          <th>FECHA ENTREGA</th>
+          <th>TOTAL A PAGAR</th>
+          <th>ACCIONES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let serie of datosSeries">
+          <td>
+            <input type="text" [value]="serie.nombre" readonly />
+          </td>
+          <td>
+            <input 
+              type="date" 
+              [value]="serie.fechaRenta" 
+              (change)="actualizarCampo(serie, 'fechaRenta', $event)" 
+              [disabled]="!editar" 
+            />
+          </td>
+          <td>
+            <input 
+              type="date" 
+              (change)="actualizarCampo(serie, 'fechaEntrega', $event)" 
+              placeholder="Fecha de entrega" 
+              [disabled]="!editar" 
+            />
+          </td>
+          <td>{{ serie.total || '$0' }}</td>
+          <td>
+            <button (click)="eliminarRenta(serie)" class="eliminar">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <h3>Suscripciones</h3>
+    <table id="suscripciones-table" class="table-style">
+      <thead>
+        <tr>
+          <th>NOMBRE</th>
+          <th>TIPO DE SUSCRIPCIÓN</th>
+          <th>FECHA DE SUSCRIPCIÓN</th>
+          <th>MÉTODO DE PAGO</th>
+          <th>ACCIONES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let suscripcion of datosSuscripciones">
+          <td>
+            <input type="text" [value]="suscripcion.nombre" readonly />
+          </td>
+          <td>{{ suscripcion.tipoSuscripcion }}</td>
+          <td>{{ suscripcion.fechaRenta }}</td>
+          <td>{{ suscripcion.metodoPago }}</td>
+          <td>
+            <button (click)="eliminarRenta(suscripcion)" class="eliminar">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>    
+</body>

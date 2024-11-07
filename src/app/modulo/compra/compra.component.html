@@ -19,14 +19,23 @@
       </div>
 
       <div id="rental-form">
+        <h2>Seleccione Película o Serie</h2>
+
+        <!-- Selector de tipo -->
+        <select (change)="seleccionarTipo($event)">
+          <option value="">Seleccionar</option>
+          <option value="pelicula">Película</option>
+          <option value="serie">Serie</option>
+        </select>
+
         <h2>Ingrese su nombre</h2>
-        <input type="text" placeholder="Nombre" id="name">
+        <input type="text" placeholder="Nombre" (input)="actualizarNombre($event)">
 
         <h2>Fecha de renta</h2>
-        <input type="date" id="rental-date">
+        <input type="date" (input)="actualizarFechaRenta($event)">
 
         <h2>Tiempo a rentar</h2>
-        <select id="rental-duration">
+        <select (change)="actualizarTiempoRenta($event)">
           <option value="1">1 semana</option>
           <option value="2">2 semanas</option>
         </select>
@@ -37,8 +46,8 @@
           <h3>TOTAL: --</h3>
         </div>
 
-        <!-- Botón Finalizar -->
-        <button type="button">Finalizar</button>
+
+        <button type="button" (click)="guardarDatos()">Finalizar</button>
       </div>
     </div>
   </div>
