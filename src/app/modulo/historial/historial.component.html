@@ -1,24 +1,13 @@
 <body>
-  <div id="header">
-    <img src="assets/imagenes/filmhouse.png" alt="Logo" id="logo">
-    <nav id="nav">
-      <a href="#">PELICULAS</a>
-      <a href="#">SERIES</a>
-      <a href="#">HISTORIAL</a>
-    </nav>
-    <div id="payment">
-      <img src="assets/imagenes/pago.png" alt="Pago" id="payment-icon">
-      <span id="textPago">PAGO</span>
-    </div>
-  </div>
-
   <div id="historial-section">
     <h2 id="historial-title">HISTORIAL DE RENTAS</h2>
-
-    <button (click)="activarEdicion()">{{ editar ? 'Guardar Cambios' : 'Editar Fechas' }}</button>
-
+  
+    <button (click)="activarEdicion()" class="editar">
+      {{ editar ? 'Guardar Cambios' : 'Editar Fechas' }}
+    </button>
+  
     <h3>Películas</h3>
-    <table id="historial-table">
+    <table id="historial-table" class="table-style">
       <thead>
         <tr>
           <th>NOMBRE</th>
@@ -32,13 +21,8 @@
       <tbody>
         <tr *ngFor="let pelicula of datosPeliculas">
           <td>
-            <input 
-              type="text" 
-              [value]="pelicula.nombre" 
-              readonly 
-            />
+            <input type="text" [value]="pelicula.nombre" readonly />
           </td>
-          <td>{{ pelicula.pelicula }}</td>
           <td>
             <input 
               type="date" 
@@ -57,14 +41,14 @@
           </td>
           <td>{{ pelicula.total || '$0' }}</td>
           <td>
-            <button (click)="eliminarRenta(pelicula)">Eliminar</button>
+            <button (click)="eliminarRenta(pelicula)" class="eliminar">Eliminar</button>
           </td>
         </tr>
       </tbody>
     </table>
-
+  
     <h3>Series</h3>
-    <table id="series-table">
+    <table id="series-table" class="table-style">
       <thead>
         <tr>
           <th>NOMBRE</th>
@@ -78,13 +62,8 @@
       <tbody>
         <tr *ngFor="let serie of datosSeries">
           <td>
-            <input 
-              type="text" 
-              [value]="serie.nombre" 
-              readonly 
-            />
+            <input type="text" [value]="serie.nombre" readonly />
           </td>
-          <td>{{ serie.serie }}</td>
           <td>
             <input 
               type="date" 
@@ -103,13 +82,36 @@
           </td>
           <td>{{ serie.total || '$0' }}</td>
           <td>
-            <button (click)="eliminarRenta(serie)">Eliminar</button>
+            <button (click)="eliminarRenta(serie)" class="eliminar">Eliminar</button>
           </td>
         </tr>
       </tbody>
     </table>
-  </div>
+  
+    <h3>Suscripciones</h3>
+    <table id="suscripciones-table" class="table-style">
+      <thead>
+        <tr>
+          <th>NOMBRE</th>
+          <th>TIPO DE SUSCRIPCIÓN</th>
+          <th>FECHA DE SUSCRIPCIÓN</th>
+          <th>MÉTODO DE PAGO</th>
+          <th>ACCIONES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let suscripcion of datosSuscripciones">
+          <td>
+            <input type="text" [value]="suscripcion.nombre" readonly />
+          </td>
+          <td>{{ suscripcion.tipoSuscripcion }}</td>
+          <td>{{ suscripcion.fechaRenta }}</td>
+          <td>{{ suscripcion.metodoPago }}</td>
+          <td>
+            <button (click)="eliminarRenta(suscripcion)" class="eliminar">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>    
 </body>
-
-
-

@@ -5,6 +5,9 @@ import { HistorialComponent } from './historial/historial.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { LoginComponent } from './login/login.component';
 import { LoginForComponent } from './login-for/login-for.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
+import { LoginSuscpComponent } from './login-suscp/login-suscp.component';
+
 
 @NgModule({
   declarations: [
@@ -12,10 +15,10 @@ import { LoginForComponent } from './login-for/login-for.component';
     HistorialComponent,   
     PrincipalComponent, 
     LoginComponent, 
-    LoginForComponent,    
+    LoginForComponent, SubscriptionComponent, LoginSuscpComponent,    
   ],
   imports: [
-    CommonModule          
+    CommonModule         
   ],
   exports: [
     CompraComponent,      

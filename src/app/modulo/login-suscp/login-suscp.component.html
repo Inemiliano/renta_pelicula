@@ -1,0 +1,40 @@
+<body>
+  <div class="login-container">
+    <div class="login-box" id="login-suscp-container">
+      <form (submit)="onSubmit($event)">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" (input)="onNombreChange($event)" required />
+        </div>
+        <div class="form-group">
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" (input)="onFechaChange($event)" required />
+        </div>
+        <div class="form-group">
+          <label for="tipoSuscripcion">Tipo de Suscripción:</label>
+          <select id="tipoSuscripcion" (change)="onTipoSuscripcionChange($event)" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option *ngFor="let suscripcion of suscripciones" [value]="suscripcion.value">
+              {{ suscripcion.label }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="metodoPago">Método de Pago:</label>
+          <select id="metodoPago" (change)="onMetodoPagoChange($event)" required>
+            <option value="" disabled selected>Selecciona un método</option>
+            <option value="Tarjeta">Tarjeta</option>
+            <option value="Transferencia">Transferencia</option>
+          </select>
+        </div>
+        <button type="submit">Guardar Suscripción</button>
+      </form>
+
+      <div *ngIf="mensajeGuardado" class="mensaje-guardado">
+        Suscripción guardada con éxito!
+      </div>
+    </div>
+  </div>
+</body>
+
+

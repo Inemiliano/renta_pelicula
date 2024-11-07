@@ -6,6 +6,8 @@ import { HistorialComponent } from './modulo/historial/historial.component';
 import { LoginComponent } from './modulo/login/login.component';
 import { LoginForComponent } from './modulo/login-for/login-for.component';
 import { SeriesComponent } from './modulo/series/series.component';
+import { SubscriptionComponent } from './modulo/subscription/subscription.component';
+import { LoginSuscpComponent } from './modulo/login-suscp/login-suscp.component';
 
 const routes: Routes = [
 
@@ -13,8 +15,10 @@ const routes: Routes = [
   {path: 'principal',component:PrincipalComponent},
   {path: 'series',component:SeriesComponent},
   {path: 'historial',component:HistorialComponent},
-  {path: 'login',component:LoginComponent},
-  {path: '',component:LoginForComponent},
+  {path: '',component:LoginComponent},
+  {path: 'formulario',component:LoginForComponent},
+  {path: 'subscrip',component:SubscriptionComponent},
+  {path: 'pago', component:LoginSuscpComponent},
 
 ];
 
